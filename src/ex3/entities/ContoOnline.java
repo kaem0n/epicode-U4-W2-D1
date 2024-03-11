@@ -3,7 +3,7 @@ package ex3.entities;
 import ex3.exceptions.BancaException;
 
 public class ContoOnline extends ContoCorrente {
-    private double maxPrelievo;
+    private final double maxPrelievo;
 
     public ContoOnline(String titolare, double saldo, double maxP) {
         super(titolare, saldo);
