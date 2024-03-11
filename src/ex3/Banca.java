@@ -9,15 +9,15 @@ import org.slf4j.LoggerFactory;
 public class Banca {
     private static final Logger logger = LoggerFactory.getLogger(Banca.class);
     public static void main(String[] args) {
-        ContoCorrente conto1 = new ContoCorrente("Grossi Mario", 20000.0);
+        ContoCorrente conto1 = new ContoCorrente("Grossi Mario", 20000);
 
         System.out.println("Saldo conto: " + conto1.restituisciSaldo());
 
         try {
-            conto1.preleva(1750.0);
+            conto1.preleva(1750);
             System.out.println("Saldo conto: " + conto1.restituisciSaldo());
         } catch (BancaException ex) {
-            System.err.println("Errore durante il prelievo: " + ex);
+            logger.error("Errore durante il prelievo: " + ex);
             ex.printStackTrace();
         }
 
@@ -29,7 +29,7 @@ public class Banca {
             conto2.preleva(2000);
             conto2.stampaSaldo();
         } catch (BancaException ex) {
-            System.err.println("Errore durante il prelievo: " + ex);
+            logger.error("Errore durante il prelievo: " + ex);
             ex.printStackTrace();
         }
     }

@@ -1,5 +1,7 @@
 package ex3.entities;
 
+import ex3.exceptions.BancaException;
+
 public class ContoCorrente {
     String titolare;
     int nMovimenti;
@@ -12,9 +14,10 @@ public class ContoCorrente {
         this.nMovimenti = 0;
     }
 
-    public void preleva(double x) {
+    public void preleva(double x) throws BancaException {
          if (nMovimenti < maxMovimenti) saldo -= x;
          else saldo -= x - 0.50;
+         if (saldo < 0) throw new BancaException("Il conto è in rosso.");
          nMovimenti++;
     }
 
