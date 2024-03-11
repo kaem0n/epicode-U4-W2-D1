@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercise1 {
-    private static final Logger logger = LoggerFactory.getLogger(Exercise1.class);
+public class Main {
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
