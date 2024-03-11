@@ -1,11 +1,8 @@
 package ex1;
 
-import ex1.entities.IndexNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
